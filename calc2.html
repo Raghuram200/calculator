@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+
+            background-color: lightseagreen;
+            padding: 40px;
+        }
+        input{
+            padding: 7px;
+            background-color: darkblue;
+            color: white;
+            font-size: xx-large;
+            box-shadow: 0 0 6px white;
+        }
+        .container{
+            background-color: darkslateblue;
+            color: white;
+            text-transform: capitalize;
+            font-size: xx-large;
+            padding: 11px;
+        }
+        button{
+            padding: 11px;
+            text-transform: uppercase;
+            font-size: xx-large;
+            border-radius: 10px;
+        }
+        .d{
+            display: flex;
+            column-gap: 40px;
+            position: relative;
+            left: 540px;
+        }
+        #res{
+            box-shadow: 0 0 4px white;
+            background-color: black;
+            text-align: center;
+            padding: 14px;
+        }
+        h1{
+            text-transform: capitalize;
+            font-style: italic;
+            font-size: xx-large;
+            text-align: center;
+            font-weight: bolder;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>simple calculator</h1>
+    <div class="container">
+    <div id="res">
+   0
+
+    </div>
+    <br>
+    <br>
+    <label for="">first number:</label> <input id="one" type="number" >
+
+    <label for="">second number:</label> <input id="two" type="number" >
+
+
+  <br> <br>
+<div class="d">
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="div()">/</button>
+    <button onclick="mul()">*</button>
+</div>
+    <br>
+   
+  
+</div>
+
+    <script>
+      
+
+        function add() {
+            let a = document.getElementById("one").value
+            var b = document.getElementById("two").value
+            let c = Number(a+b)
+            document.getElementById("res").innerHTML = c
+
+        }
+        function sub() {
+            let a= document.getElementById('one').value
+            let b = document.getElementById('two').value
+            let c = a - b
+            document.getElementById('res').innerHTML = c
+
+        }
+        function mul() {
+            let a = document.getElementById('one').value
+            let b = document.getElementById('two').value
+            let c = a * b
+            document.getElementById('res').innerHTML = c
+
+        }
+        function div() {
+            let a = document.getElementById('one').value
+            let b = document.getElementById('two').value
+            let c = a / b
+            document.getElementById('res').innerHTML = c
+
+        }
+
+    </script>
+</body>
+
+</html>
